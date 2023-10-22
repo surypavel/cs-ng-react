@@ -85,7 +85,7 @@ export const PricingPageTemplate = ({
                 <h2 className="has-text-weight-semibold is-size-2">
                   {pricing.heading}
                 </h2>
-                <p className="is-size-5">{pricing.description}</p>
+                {pricing.description && <p className="is-size-5">{pricing.description}</p>}
                 <Pricing data={pricing.plans} />
               </div>
             </div>
