@@ -3,9 +3,11 @@ import { Link } from "gatsby";
 import gb from "../img/gb.svg";
 import cz from "../img/cz.svg";
 import logo from "../img/logo.svg";
+import { useNavigation } from "../hooks/useNavigation";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const { navigation } = useNavigation("cs");
 
   return (
     <nav
@@ -35,35 +37,13 @@ const Navbar = () => {
             isActive && "is-active"
           }`}
         >
-          {/* TODO: inline override of padding is a result of refactoring
-                to a ul for accessibilty purposes, would like to see a css
-                re-write that makes this unneccesary.
-             */}
-          <li className="navbar-item" style={{ padding: "0px" }}>
-            <Link className="navbar-item" to="/">
-              Home
-            </Link>
-          </li>
-          <li className="navbar-item" style={{ padding: "0px" }}>
-            <Link className="navbar-item" to="/about">
-              About
-            </Link>
-          </li>
-          <li className="navbar-item" style={{ padding: "0px" }}>
-            <Link className="navbar-item" to="/pricing">
-              Pricing
-            </Link>
-          </li>
-          <li className="navbar-item" style={{ padding: "0px" }}>
-            <Link className="navbar-item" to="/blog">
-              Blog
-            </Link>
-          </li>
-          <li className="navbar-item" style={{ padding: "0px" }}>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-          </li>
+          {navigation.map((link) => (
+            <li className="navbar-item" style={{ padding: "0px" }}>
+              <Link className="navbar-item" to={link.link}>
+                {link.title}
+              </Link>
+            </li>
+          ))}
           <li className="navbar-item" style={{ padding: "0px" }}></li>
           <li className="navbar-end has-text-centered">
             <a className="navbar-item">
