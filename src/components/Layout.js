@@ -7,7 +7,7 @@ import "../style/custom-style.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, language }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div>
@@ -49,9 +49,9 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <Navbar language={language} />
       <div>{children}</div>
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };

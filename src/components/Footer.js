@@ -7,8 +7,8 @@ import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
 import { useNavigation } from "../hooks/useNavigation";
 
-const Footer = () => {
-  const { navigation } = useNavigation('cs');
+const Footer = ({ language }) => {
+  const { navigation } = useNavigation(language);
   return (
     <footer className="footer">
       <div className="content has-text-centered">

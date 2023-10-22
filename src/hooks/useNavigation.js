@@ -4,22 +4,22 @@ const navigation = {
       title: "Home",
       link: "/en/",
     },
-    {
-      title: "About us",
-      link: "/en/about",
-    },
-    {
-      title: "Pricing",
-      link: "/en/pricing",
-    },
-    {
-      title: "Blog",
-      link: "/en/blog",
-    },
-    {
-      title: "Contact",
-      link: "/en/contact",
-    },
+    // {
+    //   title: "About us",
+    //   link: "/en/about",
+    // },
+    // {
+    //   title: "Pricing",
+    //   link: "/en/pricing",
+    // },
+    // {
+    //   title: "Blog",
+    //   link: "/en/blog",
+    // },
+    // {
+    //   title: "Contact",
+    //   link: "/en/contact",
+    // },
   ],
   cs: [
     {
@@ -47,6 +47,6 @@ const navigation = {
 
 export const useNavigation = (language) => {
   return {
-    navigation: navigation[language],
+    navigation: navigation[language ?? 'cs'],
   };
 };

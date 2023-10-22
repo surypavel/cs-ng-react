@@ -5,9 +5,9 @@ import cz from "../img/cz.svg";
 import logo from "../img/logo.svg";
 import { useNavigation } from "../hooks/useNavigation";
 
-const Navbar = () => {
+const Navbar = ({ language }) => {
   const [isActive, setIsActive] = useState(false);
-  const { navigation } = useNavigation("cs");
+  const { navigation } = useNavigation(language);
 
   return (
     <nav
@@ -47,13 +47,15 @@ const Navbar = () => {
           <li className="navbar-item" style={{ padding: "0px" }}></li>
           <li className="navbar-end has-text-centered">
             <a className="navbar-item">
-              <span className="icon">
+              <Link className="icon" to="/">
                 <img src={cz} alt="Česky" />
-              </span>
+              </Link>
             </a>
             <a className="navbar-item">
               <span className="icon">
-                <img src={gb} alt="English" />
+                <Link className="icon" to="/en">
+                  <img src={gb} alt="English" />
+                </Link>
               </span>
             </a>
           </li>

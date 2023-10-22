@@ -1,21 +1,14 @@
 ---
 templateKey: index-page
-title: Čeština v pohodě
-language: cs
+language: en
+title: Czech clearly
 image: /img/home-jumbotron.jpg
-heading: Kontaktujte nás
-subheading: Jazykové kurzy pro cizince
+heading: Contact us
+subheading: Language courses for foreigners
 mainpitch:
-  title: Jazykové kurzy pro cizince
-  description: >-
-    * individuální nebo skupinové kurzy češtiny pro cizince
-
-    * Přípravu ke zkouškám z českého jazyka (trvalý pobyt, občanství, maturita, příprava k přijímacím zkouškám na střední školy)
-
-    * Individuální nebo skupinové doučování češtiny pro žáky základních a středních škol 
-description: Máte zájem o naše služby? Vyplňte poptávkový dotazník – ozveme se
-  vám nazpět s konkrétní nabídkou. Máte otázky? Ozvěte se nám na náš email
-  info@cestinavpohode.cz
+  title: Language courses for foreigners
+  description: Description in english.
+description: Interested?
 intro:
   blurbs:
     - image: /img/coffee.png
