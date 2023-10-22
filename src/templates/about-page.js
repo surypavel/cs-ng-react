@@ -23,8 +23,8 @@ export const AboutPageTemplate = ({
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <Features gridItems={teachers} />
               <PageContent className="content" content={content} />
+              <Features gridItems={teachers} />
             </div>
           </div>
         </div>
