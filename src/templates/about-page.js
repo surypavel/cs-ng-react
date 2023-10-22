@@ -3,9 +3,15 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Features from "../components/Features";
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({
+  title,
+  teachers,
+  content,
+  contentComponent,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -17,6 +23,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
+              <Features gridItems={teachers} />
               <PageContent className="content" content={content} />
             </div>
           </div>
@@ -30,6 +37,7 @@ AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  teachers: PropTypes.array,
 };
 
 const AboutPage = ({ data }) => {
@@ -41,6 +49,7 @@ const AboutPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        teachers={post.frontmatter.teachers}
       />
     </Layout>
   );
@@ -58,6 +67,14 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        teachers {
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+            }
+          }
+          text
+        }
       }
     }
   }

@@ -133,6 +133,16 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: Teachers,
+              name: teachers,
+              widget: list,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Text, name: text, widget: text },
+                ],
+            }
       - file: "src/pages/pricing/index.md"
         label: "Pricing Page"
         name: "pricing"
