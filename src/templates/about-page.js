@@ -68,6 +68,7 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         teachers {
+          name
           image {
             childImageSharp {
               gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)

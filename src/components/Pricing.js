@@ -2,14 +2,14 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 const Pricing = ({ data }) => (
-  <div className="columns">
+  <div className="columns is-centered">
     {data.map((price) => (
-      <div key={price.plan} className="column">
+      <div key={price.plan} className="column is-4">
         <section className="section">
           <h4 className="has-text-centered has-text-weight-semibold">
             {price.plan}
           </h4>
-          <h2 className="is-size-1 has-text-weight-bold has-text-primary has-text-centered">
+          <h2 className="is-size-1 has-text-weight-bold has-text-primary has-text-centered mt-2">
             {price.price} Kč
           </h2>
           <p className="has-text-weight-semibold">{price.description}</p>

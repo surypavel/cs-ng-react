@@ -1,12 +1,16 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import { HTMLContent } from "./Content";
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
     {gridItems.map((item) => (
       <div key={item.text} className="column is-6">
         <section className="section">
+          <h3 className="title is-size-4 has-text-weight-bold is-bold-light">
+            {item.name}
+          </h3>
           <div className="has-text-centered">
             <div
               style={{
@@ -17,7 +21,7 @@ const FeatureGrid = ({ gridItems }) => (
               <PreviewCompatibleImage imageInfo={item} />
             </div>
           </div>
-          <p>{item.text}</p>
+          <HTMLContent content={item.text} />
         </section>
       </div>
     ))}
