@@ -34,6 +34,23 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
+  - name: "teacher"
+    label: "Teachers"
+    folder: "src/pages/teachers"
+    slug: "{{id}}"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "teacher",
+        }
+      - { label: ID, name: id, widget: string }
+      - { label: Name, name: name, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: Text, name: body, widget: "markdown" }
+
   - name: "pages"
     label: "Pages"
     files:

@@ -6,6 +6,7 @@ import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import PricingPagePreview from "./preview-templates/PricingPagePreview";
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
+import TeacherPreview from "./preview-templates/TeacherPreview";
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
@@ -17,4 +18,5 @@ languages.forEach((lang) => {
   CMS.registerPreviewTemplate(`about${lang}`, AboutPagePreview);
   CMS.registerPreviewTemplate(`pricing${lang}`, PricingPagePreview);
   CMS.registerPreviewTemplate(`blog${lang}`, BlogPostPreview);
+  CMS.registerPreviewTemplate(`teacher${lang}`, TeacherPreview);
 });
